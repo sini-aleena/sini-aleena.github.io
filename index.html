@@ -16,7 +16,7 @@
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+ 
     
 <!--
 
@@ -142,12 +142,12 @@ https://www.tooplate.com/view/2115-marvel
 
                         <div class="item">
                           <div class="project-info">
-                            <img src="images/project/acc.jpg" class="img-fluid" alt="project image">
+                            <img src="images/project/acc.png" class="img-fluid" alt="project image">
                           </div>
                         </div>
                         <div class="item">
                           <div class="project-info">
-                            <img src="images/project/App.jpg" class="img-fluid" alt="project image">
+                            <img src="images/project/app.jpg" class="img-fluid" alt="project image">
                           </div>
                         </div>
                         <div class="item">
@@ -319,16 +319,29 @@ https://www.tooplate.com/view/2115-marvel
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 
     <script type="text/JavaScript">
       function sendMail() {
-    var link = "mailto:sinialeenanarghees.ca@gmail.com"
+        Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "sinialeena9@gmail.com",
+    Password : "55FC184674D23B7BFD1279CDAE652DD31023",
+    To : "sinialeenanarghees.ca@gmail.com",
+    From : "sinialeena9@gmail.com",
+    Subject : "From Portfolio Name: " +  document.getElementById('name').value + " Email: " + document.getElementById('email').value,
+    Body : " Message: " + document.getElementById('message').value
+}).then(
+  message => alert(message)
+);
+    // var link = "mailto:sinialeenanarghees.ca@gmail.com"
             
-             + "?subject=" + encodeURIComponent("From Portfolio" )
-             + "&body=" + encodeURIComponent( "Name: " +  document.getElementById('name').value + " Email: " + document.getElementById('email').value + " Message: " + document.getElementById('message').value)
-    ;
+    //          + "&subject=" + encodeURIComponent("From Portfolio Name: " +  document.getElementById('name').value + " Email: " + document.getElementById('email').value )
+    //          + "&body=" + encodeURIComponent(" Message: " + document.getElementById('message').value)
+    // ;
     
-    window.location.href = link;
+    // window.location.href = link;
 }
     </script>
 
